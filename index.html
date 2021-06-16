@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de tarefas</title>
+    <link rel="stylesheet" href="Bootstrap4/css/bootstrap.min.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        container>div {
+            flex: 1;
+        }
+
+        body {
+            background-color: rgb(64, 61, 66);
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            font: normal 15pt Arial;
+            list-style: none;
+            margin: -5px;
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            color: black;
+            background-color: white;
+            border-bottom: 3px solid black;
+            text-decoration: none;
+        }
+
+        .cor-titulo {
+            color: white;
+        }
+
+        .divs-principais {
+            background: whitesmoke;
+            border-radius: 10px;
+            padding: 15px;
+            width: 350px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+        }
+
+        .fonts {
+            font: normal 15pt Arial;
+        }
+
+        .botao-lixeira{
+            color: #128465;
+        }
+
+        li{
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="cor-titulo font-weight  text-center">
+        Bem-vindo à sua agenda de tarefas!
+    </h1>
+
+    <br>
+
+    <div id="msgDaHora" class="divs-principais clearfix text-center fonts">
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <div class="divs-principais text-center fonts">
+            <h4 class="float-left">Tarefas da manhã: </h4>
+            <form id="tarefasManha">
+                <input required type="text" name="" id="inputManha" onfocus="this.value='';"> 
+                <button type="submit" class="float-right btn btn-outline-success">+</button>
+                <br><br>
+                <input required type="time" id="inputTimeM">
+                <input required type="date" name="" id="inputDateM">
+                <br><br>
+            </form>
+            <div id="mostrarManha"></div>  
+        </div>
+
+        <div class="divs-principais text-center fonts">
+            <h4 class="float-left">Tarefas da tarde: </h4>
+            <form id="tarefasTarde">
+                <input required type="text" name="" id="inputTarde"> 
+                <button type="submit" class="float-right btn btn-outline-success">+</button>
+                <br><br>
+                <input required type="time" id="inputTimeT">
+                <input required type="date" name="" id="inputDateT">
+                <br><br>
+            </form>
+            <div id="mostrarTarde"></div>
+        </div>
+
+        <div class="divs-principais text-center fonts">
+            <h4 class="float-left">Tarefas da noite: </h4>
+            <form id="tarefasNoite">
+                <input required type="text" name="" id="inputNoite"> 
+                <button type="submit" class="float-right btn btn-outline-success">+</button>
+                <br><br>
+                <input required type="time" id="inputTimeN">
+                <input required type="date" name="" id="inputDateN">
+                <br><br>
+            </form>
+            <div id="mostrarNoite"></div>
+        </div>
+        
+        <br clear="left">
+    </div>
+
+    <script src="code.js"></script>
+</body>
+
+</html>
